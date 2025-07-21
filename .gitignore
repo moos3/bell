@@ -1,0 +1,28 @@
+Sure, here's a .gitignore file for a Go project that includes a React UI in a ui/ directory:
+
+# Go
+.cache/
+*.exe
+*.test
+*.prof
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.bak
+*.swo
+
+# macOS
+.DS_Store
+
+# React UI
+/ui/node_modules/
+/ui/build/
+/ui/.env*.local
+/ui/.next/
+/ui/npm-debug.log*
+/ui/yarn-debug.log*
+/ui/yarn-error.log*
+/ui/storybook-static/
+/ui/coverage/
