@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package dns_service.v1;
+option go_package = "github.com/moos3/dns_tools/server/proto/dns_service/v1";
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+
+service DNSService {
+  // Authenticate validates an API key
+  rpc Authenticate(AuthenticateRequest) returns (AuthenticateResponse) {
+    option (google.api.http) = {
+      post: "/v1/authenticate"
+      body: "*"
+    };
+  }
+
+  // GetRecords retrieves DNS records for a domain, filterable by record type
+  rpc GetRecords(GetRecordsRequest) returns (GetRecordsResponse) {
+    option (google.api.http) = {
+      get: "/v1/records/{domain}"
+    };
+  }
+}
+
+message AuthenticateRequest {
+  string api_key = 1;
+}
+
+message AuthenticateResponse {
+  bool valid = 1;
+  string message = 2;
+}
+
+message GetRecordsRequest {
+  string domain = 1;
+  repeated string record_type = 2; // Optional filter (e.g., ["CNAME", "A"])
+}
+
+message DNSRecord {
+  int32 domain_id = 1;
+  string record_type = 2;
+  string record_data = 3;
+  int32 ttl = 4;
+  string source = 5;
+  string last_updated = 6;
+}
+
+message GetRecordsResponse {
+  repeated DNSRecord records = 1;
+}

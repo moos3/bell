@@ -1,0 +1,8 @@
+# Configuration for dns_service
+alloydb:
+  host: "ALLOYDB_PRIVATE_IP" # AlloyDB private IP (e.g., 10.0.0.2)
+  port: "5432"
+  user: "YOUR_DB_USER"
+  password: "YOUR_DB_PASSWORD"
+  database: "dns_records_db"
+  sslmode: "disable" # SSL mode: disable, require, verify-ca, verify-full
