@@ -1,11 +1,15 @@
-version: v1
+version: v2
+managed:
+  enabled: true
+  override:
+    - file_option: go_package_prefix
+      value: github.com/moos3/bell/pb
 plugins:
-  - plugin: buf.build/protocolbuffers/go
+  - remote: buf.build/protocolbuffers/go:v1.34.2
     out: pb
     opt: paths=source_relative
-  - plugin: buf.build/grpc/go
+  - remote: buf.build/grpc/go:v1.4.0
     out: pb
     opt: paths=source_relative
-  - plugin: buf.build/grpc-ecosystem/gateway
-    out: pb
-    opt: paths=source_relative
+inputs:
+  - directory: proto

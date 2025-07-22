@@ -1,4 +1,4 @@
-# Configuration for dns_service
+# Configuration for bell
 alloydb:
   host: "ALLOYDB_PRIVATE_IP" # AlloyDB private IP (e.g., 10.0.0.2)
   port: "5432"
