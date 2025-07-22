@@ -26,7 +26,7 @@ import (
 	"google.golang.org/grpc/status"
 
 	"github.com/moos3/bell/config"
-	pb "github.com/moos3/bell/pb/dns_service/v1"
+	pb "github.com/moos3/bell/pb/bell/v1"
 )
 
 // server implements the DNSService gRPC interface, handling authentication

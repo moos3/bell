@@ -12,7 +12,7 @@ CZDS_BINARY=$(BINARY_DIR)/czds
 QUERY_BINARY=$(BINARY_DIR)/query
 CLIENT_TEST_BINARY=$(BINARY_DIR)/client_test
 CONFIG=config.yaml
-SERVER_IMAGE=dns-service-server:latest
+SERVER_IMAGE=bell:latest
 UI_DIR=ui
 ZONES_DIR=/zones
 

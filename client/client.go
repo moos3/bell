@@ -11,7 +11,7 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 
-	pb "github.com/moos3/bell/pb/dns_service/v1"
+	pb "github.com/moos3/bell/pb/bell/v1"
 )
 
 // Client encapsulates a gRPC client for the DNS service.

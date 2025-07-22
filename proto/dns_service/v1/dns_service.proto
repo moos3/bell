@@ -1,7 +1,7 @@
 syntax = "proto3";
 
-package dns_service.v1;
-option go_package = "github.com/moos3/dns_tools/server/proto/dns_service/v1";
+package bell.v1;
+option go_package = "github.com/moos3/bell/proto/bell/v1";
 
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
